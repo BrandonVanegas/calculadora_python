@@ -25,33 +25,44 @@ if __name__ == "__main__":
 
     while True:
 
-        tipo = input("Que operaciòn desea hacer?")
-        a = int(input("digite el numero 1:"))
-        b = int(input("digite el numero 2:"))
+        tipo = input("Que operaciòn desea hacer?").lower()
+        if (
+            tipo == "suma"
+            or tipo == "resta"
+            or tipo == "division"
+            or tipo == "multiplicacion"
+            or tipo == "exponencial"
+            or tipo == "salir"
+        ):
+            if tipo == "salir":
+                sys.exit()
 
-        if tipo == "suma":
-            resultado = suma(a, b)
-            print(resultado)
+            a = int(input("digite el numero 1:"))
+            b = int(input("digite el numero 2:"))
 
-        if tipo == "resta":
+            if tipo == "suma":
+                resultado = suma(a, b)
+                print(resultado)
 
-            resultado = resta(a, b)
-            print(resultado)
+            if tipo == "resta":
 
-        if tipo == "multiplicacion":
+                resultado = resta(a, b)
+                print(resultado)
 
-            resultado = multiplicacion(a, b)
-            print(resultado)
+            if tipo == "multiplicacion":
 
-        if tipo == "division":
+                resultado = multiplicacion(a, b)
+                print(resultado)
 
-            resultado = division(a, b)
-            print(resultado)
+            if tipo == "division":
 
-        if tipo == "exponencial":
+                resultado = division(a, b)
+                print(resultado)
 
-            resultado = exponencial(a)
-            print(resultado)
+            if tipo == "exponencial":
 
-        if tipo == "salir":
-            sys.exit()
+                resultado = exponencial(a, b)
+                print(resultado)
+
+        else:
+            print("no escogio operacion")
