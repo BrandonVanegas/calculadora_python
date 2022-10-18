@@ -1,3 +1,6 @@
+import sys
+
+
 def suma(a, b):
     return a + b
 
@@ -14,30 +17,41 @@ def division(a, b):
     return a / b
 
 
-def exponencial(a):
-    return a**
+def exponencial(a, b):
+    return a**b
 
 
 if __name__ == "__main__":
 
-    tipo = input("Que operaciòn desea hacer?")
-    a = int(input("digite el numero 1:"))
-    b = int(input("digite el numero 2:"))
+    while True:
 
-    if tipo == "suma":
-        resultado = suma(a, b)
-        print(resultado)
+        tipo = input("Que operaciòn desea hacer?")
+        a = int(input("digite el numero 1:"))
+        b = int(input("digite el numero 2:"))
 
-    if tipo == "resta":
+        if tipo == "suma":
+            resultado = suma(a, b)
+            print(resultado)
 
-        resultado = resta(a, b)
-        print(resultado)
+        if tipo == "resta":
 
-    if tipo == "multiplicacion":
+            resultado = resta(a, b)
+            print(resultado)
 
-        resultado = multiplicacion(a, b)
-        print(resultado)
-    if tipo == "division":
+        if tipo == "multiplicacion":
 
-        resultado = division(a, b)
-        print(resultado)
+            resultado = multiplicacion(a, b)
+            print(resultado)
+
+        if tipo == "division":
+
+            resultado = division(a, b)
+            print(resultado)
+
+        if tipo == "exponencial":
+
+            resultado = exponencial(a)
+            print(resultado)
+
+        if tipo == "salir":
+            sys.exit()
