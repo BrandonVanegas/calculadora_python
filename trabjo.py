@@ -14,6 +14,10 @@ def division(a, b):
     return a / b
 
 
+def exponencial(a):
+    return a**
+
+
 if __name__ == "__main__":
 
     tipo = input("Que operaciòn desea hacer?")
